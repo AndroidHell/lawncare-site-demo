@@ -11,6 +11,7 @@
 - finish plugging in FabForm
 - style rest of text fonts
 - clean up old codebase
+- fix embedded share stuff
 
 ## Commands
 
