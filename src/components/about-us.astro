@@ -1,0 +1,41 @@
+---
+import { Icon } from "astro-icon/components";
+import ContentSection from "~/components/content-section.astro";
+---
+
+<ContentSection title="We are Walker & Sons" id="aboutus">
+  <Icon slot="eyebrow" name="logo" class="size-48 text-green-700" />
+  <Fragment slot="lead">
+    I am
+    <span class="text-primary">Fred Walker</span>
+    and I started this business with my two sons,
+    <span class="text-primary">James</span>
+    and
+    <span class="text-primary">Paul</span>
+    back in 2017.
+    <span class="text-primary"
+      >Our Mission is to provide world class service for all your lawn care
+      needs</span
+    >
+    at a price that won't empty your wallet.
+  </Fragment>
+
+  <!-- phone number here -->
+  <!-- address here -->
+
+  <Fragment slot="flair">
+    <span class="text-primary">Phone:</span>
+    (123) 456-7890<br />
+    <span class="text-primary">Address:</span> 123 Green Lane, Garden City, NY 11530
+  </Fragment>
+
+  <div class="grid grid-cols-1 gap-2 sm:grid-cols-1">
+    <a
+      href="#contactus"
+      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
+    >
+      <Icon name="mdi:cellphone" class="size-8" />
+      <span>Contact Us Now!</span>
+    </a>
+  </div>
+</ContentSection>

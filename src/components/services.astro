@@ -1,0 +1,90 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import ContentSection from "~/components/content-section.astro";
+import type { FeatureItem } from "~/types";
+import mowerImage from "~/assets/mower-service.jpg";
+import lawnHealthImage from "~/assets/lawn-health-service.jpg";
+import trimmingImage from "~/assets/trimming-service.jpg";
+import flowersImage from "~/assets/flower-service.jpg";
+import mulchImage from "~/assets/mulch-service.jpg";
+import pestControlImage from "~/assets/pest-control-service.jpg";
+
+const items = [
+  {
+    src: mowerImage.src,
+    title: "Lawn Mowing",
+    description:
+      "We have a fleet of all new, top of the line push and rider mowers",
+  },
+  {
+    src: lawnHealthImage.src,
+    title: "Lawn Health",
+    description:
+      "We offer a wide variety of fertilization and weed control techniques to make sure your lawn looks it's best",
+  },
+  {
+    src: trimmingImage.src,
+    title: "Trimming",
+    description: "Tree and hedges",
+  },
+  {
+    src: flowersImage.src,
+    title: "Flower Services",
+    description: "We Offer A Wide Variety Of Perennial and Annuals",
+  },
+  {
+    src: mulchImage.src,
+    title: "Mulching",
+    description: "Enhance Soil Heath and Appearance",
+  },
+  {
+    src: pestControlImage.src,
+    title: "Pest Control",
+    description: "We Kill 'em, you grill 'em",
+  },
+];
+---
+
+<ContentSection title="Services" id="services">
+  <Fragment slot="lead">
+    Here are some of the <span class="text-primary">services</span>
+    that we offer. We can do <span class="text-primary">plenty more</span> so if
+    you have a special project in mind, <span class="text-primary"
+      >don't hesitate to give us a call</span
+    >!
+  </Fragment>
+  <div
+    class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3"
+  >
+    {
+      items.map((item) => (
+        <div class="relative flex flex-col justify-center overflow-hidden">
+          <div class="group relative mx-auto flex h-auto w-full max-w-xs rounded-xl ring-gray-900/5 sm:max-w-sm md:max-w-md lg:h-72 lg:w-96">
+            <div class="z-10 h-full w-full overflow-hidden rounded-xl border border-gray-200 transition duration-300 ease-in-out group-hover:opacity-80 dark:border-gray-700">
+              <img
+                src={item.src}
+                class="animate-fade-in block h-full w-full object-cover object-center opacity-100 transition duration-300 group-hover:scale-110 group-hover:blur-sm"
+                alt={item.title}
+              />
+              <div class="absolute inset-0 rounded-xl bg-black opacity-0 transition-opacity duration-300 group-hover:opacity-20" />
+            </div>
+            <div class="absolute bottom-0 left-0 z-20 w-full p-4 opacity-100 transition-opacity duration-300 group-hover:opacity-0">
+              <h1 class="font-serif font-bold text-white text-2xl">
+                {item.title}
+              </h1>
+            </div>
+            <div class="absolute bottom-0 left-0 z-20 w-full translate-y-full transform p-4 transition-transform duration-300 group-hover:translate-y-0">
+              <h1 class="transform font-serif font-bold text-white transition-transform duration-300 text-2xl group-hover:translate-y-0">
+                {item.title}
+              </h1>
+              <h2 class="transform font-light text-gray-100 transition-transform duration-300 text-sm group-hover:translate-y-0">
+                {item.description}
+              </h2>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</ContentSection>

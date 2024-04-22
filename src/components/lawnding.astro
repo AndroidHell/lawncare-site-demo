@@ -1,0 +1,15 @@
+---
+import { Image } from "astro:assets";
+import lawnImage from "~/assets/lawn.jpg";
+
+const widths = [450, 800, 1200];
+const sizes = "100vw";
+---
+
+<Image
+  class="h-full w-full object-cover"
+  src={lawnImage}
+  widths={widths}
+  sizes={sizes}
+  alt="An image of a well cared for lawn"
+/>
