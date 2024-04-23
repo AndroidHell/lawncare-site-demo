@@ -70,10 +70,18 @@ const description =
       <Services />
       <Showcase />
     </div>
-    <div class="m z-0 w-screen bg-gray-200 pt-32 md:py-6 lg:py-32">
+    <div
+      class="bg-default-contact z-0 w-screen pt-32 text-default md:py-6 lg:py-32"
+    >
       <ContactUs />
     </div>
 
     <Footer />
   </body>
 </html>
+
+<style>
+  .bg-default-contact {
+    background-color: var(--color-background-contact);
+  }
+</style>

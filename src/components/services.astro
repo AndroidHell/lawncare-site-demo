@@ -15,33 +15,37 @@ const items = [
     src: mowerImage.src,
     title: "Lawn Mowing",
     description:
-      "We have a fleet of all new, top of the line push and rider mowers",
+      "Our fleet features brand-new, state-of-the-art push and rider mowers to ensure top-quality lawn care services.",
   },
   {
     src: lawnHealthImage.src,
     title: "Lawn Health",
     description:
-      "We offer a wide variety of fertilization and weed control techniques to make sure your lawn looks it's best",
+      "We offer a wide variety of fertilization and weed control techniques to make sure your lawn looks it's best.",
   },
   {
     src: trimmingImage.src,
     title: "Trimming",
-    description: "Tree and hedges",
+    description:
+      "Refine your lawn's beauty with precise trimming services, expertly sculpting greenery for a pristine landscape.",
   },
   {
     src: flowersImage.src,
     title: "Flower Services",
-    description: "We Offer A Wide Variety Of Perennial and Annuals",
+    description:
+      "We provide an extensive selection of perennials and annuals to meet your gardening needs.",
   },
   {
     src: mulchImage.src,
     title: "Mulching",
-    description: "Enhance Soil Heath and Appearance",
+    description:
+      "Boost soil health and moisture with our mulching service, creating lush, vibrant landscapes for your outdoor space.",
   },
   {
     src: pestControlImage.src,
     title: "Pest Control",
-    description: "We Kill 'em, you grill 'em",
+    description:
+      "Safeguard your lawn with our expert pest control service, ensuring a healthy, thriving outdoor environment for your enjoyment.",
   },
 ];
 ---
@@ -69,16 +73,16 @@ const items = [
               />
               <div class="absolute inset-0 rounded-xl bg-black opacity-0 transition-opacity duration-300 group-hover:opacity-20" />
             </div>
-            <div class="absolute bottom-0 left-0 z-20 w-full p-4 opacity-100 transition-opacity duration-300 group-hover:opacity-0">
+            <div class="absolute bottom-0 left-0 z-20 w-full translate-y-0 transform p-4 opacity-100 transition-opacity duration-300 group-hover:opacity-0">
               <h1 class="font-serif font-bold text-white text-2xl">
                 {item.title}
               </h1>
             </div>
-            <div class="absolute bottom-0 left-0 z-20 w-full translate-y-full transform p-4 transition-transform duration-300 group-hover:translate-y-0">
-              <h1 class="transform font-serif font-bold text-white transition-transform duration-300 text-2xl group-hover:translate-y-0">
+            <div class="absolute bottom-0 left-0 z-20 w-full translate-y-full transform p-4 transition-all duration-300 group-hover:translate-y-0">
+              <h1 class="font-serif font-bold text-white text-2xl">
                 {item.title}
               </h1>
-              <h2 class="transform font-light text-gray-100 transition-transform duration-300 text-sm group-hover:translate-y-0">
+              <h2 class="font-light text-gray-100 text-sm">
                 {item.description}
               </h2>
             </div>

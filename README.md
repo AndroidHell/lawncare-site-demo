@@ -1,17 +1,17 @@
 # Lawncare Site Demo
 
 - built with Astro and Tailwind
-- using FabForm for contact form probably (just to demo it)
+- using web3form currently(just slap in your token)
+  - will probably be using Twilio/sendGrid when I am up and running
 - landing page format using anchors for each section
 - uses a custom Flowbite library on top of TW for th carousel feature
 
 ### TODO
 
 - get a better logo image on splash section
-- finish plugging in FabForm
 - style rest of text fonts
+- fix slide animation for service section - rip
 - clean up old codebase
-- fix embedded share stuff
 
 ## Commands
 
