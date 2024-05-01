@@ -2,6 +2,8 @@
 import { Icon } from "astro-icon/components";
 import ContentSection from "~/components/content-section.astro";
 import type { FeatureItem } from "~/types";
+
+const web3FormsAccessKey = import.meta.env.WEB3FORMS_ACCESS_KEY;
 ---
 
 <ContentSection title="Contact Us" id="contactus">
@@ -102,7 +104,7 @@ import type { FeatureItem } from "~/types";
                 <input
                   type="hidden"
                   name="access_key"
-                  value="710572f9-381f-44c5-8418-b7a0621c283d"
+                  value={web3FormsAccessKey}
                 />
                 <!-- value="YOUR_ACCESS_KEY_HERE" -->
 
