@@ -3,7 +3,8 @@ import { Icon } from "astro-icon/components";
 import ContentSection from "~/components/content-section.astro";
 import type { FeatureItem } from "~/types";
 
-const web3FormsAccessKey = process.env.WEB3FORMS_ACCESS_KEY;
+// const web3FormsAccessKey = import.meta.env.WEB3FORMS_ACCESS_KEY; //dev
+const web3FormsAccessKey = process.env.WEB3FORMS_ACCESS_KEY; //prod
 ---
 
 <ContentSection title="Contact Us" id="contactus">
